@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_lesson/two_controller.dart';
 
 import 'controller.dart';
 import 'home_page.dart';
@@ -17,7 +16,6 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AppController()),
-        ChangeNotifierProvider(create: (context) => TwoController()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
