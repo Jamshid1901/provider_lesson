@@ -25,7 +25,7 @@ class _NextPageState extends State<NextPage> {
               'Name: ',
             ),
             Text(
-              '${context.watch<AppController>().count}',
+              context.watch<AppController>().name,
               style: Theme.of(context).textTheme.headline4,
             ),
           ],

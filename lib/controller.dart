@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppController extends ChangeNotifier{
+  String name = "";
   int count = 0;
   int currentIndex = 0;
 
@@ -11,6 +12,11 @@ class AppController extends ChangeNotifier{
 
   addCount(){
     count++;
+    notifyListeners();
+  }
+
+  setName(String name1){
+    name = name1;
     notifyListeners();
   }
 
