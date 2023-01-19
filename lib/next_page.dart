@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_lesson/controller.dart';
+import 'package:provider_lesson/two_controller.dart';
 
 class NextPage extends StatefulWidget {
   const NextPage({super.key, required this.title});
@@ -28,7 +29,7 @@ class _NextPageState extends State<NextPage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '${context.watch<AppController>().count}',
+              '${context.watch<TwoController>().count}',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
@@ -36,7 +37,7 @@ class _NextPageState extends State<NextPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          context.read<AppController>().addCount();
+          context.read<TwoController>().addCount();
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
